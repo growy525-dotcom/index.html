@@ -82,7 +82,7 @@ font-size:18px;
 <label class="option"><input type="radio" name="q1"> Sambalpur</label>
 <label class="option"><input type="radio" name="q1"> Puri</label>
 
-<button>Next</button>
+<button onclick="nextQuestion()">Next</button>
 
 </div>
 <script>
@@ -104,6 +104,11 @@ function updateTimer() {
 
 setInterval(updateTimer, 1000);
 updateTimer();
+  let currentQuestion = 1;
+function nextQuestion() {
+  alert("Question " + (currentQuestion + 1) + " Coming Soon");
+  currentQuestion++;
+                     }
 </script>
 </body>
 </html>
