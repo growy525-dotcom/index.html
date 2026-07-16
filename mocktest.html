@@ -85,6 +85,25 @@ font-size:18px;
 <button>Next</button>
 
 </div>
+<script>
+let time = 60 * 60;
 
+function updateTimer() {
+  let minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  document.getElementById("timer").innerHTML =
+    minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+  if (time > 0) {
+    time--;
+  } else {
+    alert("Time Over!");
+  }
+}
+
+setInterval(updateTimer, 1000);
+updateTimer();
+</script>
 </body>
 </html>
